@@ -37,9 +37,9 @@ const SignIn = () => {
                     <p className='pageHeader'>Welcome </p>
                 </header>
                 <form onSubmit={submitHandler}>
-                    <input type='email' className='emailInput' id='email' placeholder='Email Address..' value={email} onChange={onChange}></input>
+                    <input required type='email' className='emailInput' id='email' placeholder='Email Address..' value={email} onChange={onChange}></input>
                     <div className='passwordInputDiv'>
-                        <input type={showPassword ? 'text' : 'password'} className='passwordInput' id='password' placeholder='Password' value={password} onChange={onChange}></input>
+                        <input required type={showPassword ? 'text' : 'password'} className='passwordInput' id='password' placeholder='Password' value={password} onChange={onChange}></input>
                         <img src={visibilityIcon} alt='Show password' className='showPassword' onClick={() => setShowPassword(prev => !prev)} />
                     </div>
                     <Link to='/forgot-password' className='forgotPasswordLink' >Forgot Password</Link>
