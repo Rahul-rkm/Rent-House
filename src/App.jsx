@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { Explore, ForgotPassword, Offers, Profile, SignIn, SignUp } from './pages'
 import { Navbar } from './components'
 import PrivateRoute from './components/PrivateRoute';
+import Category from './pages/Category';
 function App() {
 
   return (
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Explore />} />
           <Route path="/offers" element={<Offers />} />
+          <Route path="/category/:categoryName" element={<Category />} />
           <Route path='/profile' element={<PrivateRoute />}>
             <Route path="/profile" element={<Profile />} />
           </Route>
