@@ -23,6 +23,7 @@ const SignIn = () => {
             const userCredential = await signInWithEmailAndPassword(auth, email, password)
 
             if (userCredential.user) { // <- means user is successfully signed in
+                toast.success("Login successful")
                 navigate("/")
             }
 
